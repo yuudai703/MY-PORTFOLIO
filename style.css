@@ -2,8 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
+.Headline {
+  opacity: 0; /* 初期状態では透明に */
+  transform: translateX(64px); /* 右に移動 */
+  transition: opacity 1.6s ease, transform 1.6s ease; /* アニメーションの設定 */
+}
+
+/* 初期状態でのフェードインアニメーション */
+@keyframes FadeIn {
+  from {
+    opacity: 0; /* 初期状態では透明 */
+    transform: translateX(64px); /* 右に移動 */
+  }
+  to {
+    opacity: 1; /* 最終状態では不透明 */
+    transform: translateX(0); /* 元の位置 */
+  }
+}
+
+.Headline {
+  animation: FadeIn 1.6s ease forwards; /* フェードインアニメーションの設定 */
+}
 
 
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#path {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: draw 5s ease forwards;
+}
+
+
+
+.contentsBlock{
+  height:500px;
+  width: 70%;
+  justify-content: center; /* 横方向に中央揃え */
+  align-items: center; /* 縦方向に中央揃え */
+  /* margin: 0 auto; */
+  margin-bottom: 200px;
+}
+
+h1{
+  font-size: 50px;
+  z-index: 1;
+  /* margin-top:-50px; */
+  /* background-color: brown; */
+}
+
+p{
+  font-size: 21px;
+}
+
+.title{
+  font-size: 50px;
+  color: beige;
+  justify-content: center; /* 横方向に中央揃え */
+  text-align: center;
+
+}
+
+
+.background-container {
+  background-image: url('back.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* 背景画像を固定 */
+}
 
 
 
