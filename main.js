@@ -1,6 +1,7 @@
 import './style.css'
 // import javascriptLogo from './javascript.svg'
 import myPro from './pro.jpg'
+import sklls from './skills.jpg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
 import { ageCounter } from './counter.js'
@@ -67,14 +68,14 @@ document.querySelector('#ResumeCV').innerHTML = `
 `
 
 document.querySelector('#Skills').innerHTML = `
-<div class=" mx-auto mt-5 p-4 bg-white block shadow-lg rounded-lg Headline contentsBlock bg-opacity-25 skills" style="opacity: 0.2!important;">
+<div class=" mx-auto mt-5 p-4 bg-white block shadow-lg rounded-lg Headline contentsBlock bg-opacity-25 skills" style="overflow: hidden;border-width: 0;">
+
+
+<div style="z-index: 99;">
 <h1 style="">Skills</h1>
-
-
-
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
   <!-- グリッドアイテム1 -->
-  <div class=" p-4" style=''>
+  <div class=" p-4" style='z-index: 99;'>
     <div style='display: flex; margin-bottom: 14px;'>
       <p style="background-color: gray; font-size: 30px; border-radius: 10px 100px / 120px; text-align: center; width: 170px; height:50px;">
         Laravel
@@ -106,7 +107,7 @@ document.querySelector('#Skills').innerHTML = `
 
   </div>
   <!-- グリッドアイテム2 -->
-  <div class=" p-4">
+  <div class=" p-4" style='z-index: 99;'>
 
     <div style='display: flex; margin-bottom: 14px;'>
       <p style="background-color: gray; font-size: 30px; border-radius: 10px 100px / 120px; text-align: center; width: 170px;  height:50px;">
@@ -141,7 +142,7 @@ document.querySelector('#Skills').innerHTML = `
 
   </div>
   <!-- グリッドアイテム3 -->
-  <div class="p-4">
+  <div class="p-4" style='z-index: 99;'>
     <div style='display: flex; margin-bottom: 14px;'>
     <p style="background-color: gray; font-size: 30px; border-radius: 10px 100px / 120px; text-align: center; width: 170px; height:50px;">
       JaveScript
@@ -165,7 +166,8 @@ document.querySelector('#Skills').innerHTML = `
 
   </div>
 </div>
-
+<img style='opacity: 0.2; z-index:0; background-size: cover; margin-top: -600px; width: 620%; height: auto;' src="${sklls}" class="logo vanilla" alt="JavaScript logo" />
+</div>
 
 
    <div style="height: 300px;">
